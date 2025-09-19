@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palindrome-checker</title>
+    <title>Palindrome Checker | Verify Text Symmetry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <main>
+        <section class="container">
+            <header class="header">
+                <h1 class="main-title">Palindrome Checker</h1>
+                <p class="subtitle">Verify if your text reads the same forwards and backwards</p>
+            </header>
+            
+            <form class="input-group">
+                <label for="text-input" class="input-label">Enter text to check:</label>
+                <input id="text-input" type="text" class="text-input" placeholder="Type a word or phrase..." autocomplete="off">
+            </form>
+            
+            <button id="check-btn" class="check-btn">
+                <i class="fas fa-check-circle"></i> Check Palindrome
+            </button>
+            
+            <div id="result-container" class="result-container">
+                <i class="result-icon"></i>
+                <p id="result" class="result-text"></p>
+            </div>
+            
+            <div class="info-container">
+                <h3 class="info-title"><i class="fas fa-info-circle"></i> What is a Palindrome?</h3>
+                <p class="info-text">A palindrome is a word, phrase, or sequence that reads the same backward as forward, ignoring punctuation, case, and spacing.</p>
+                
+                <div class="examples">
+                    <div class="example">madam</div>
+                    <div class="example">racecar</div>
+                    <div class="example">nurses run</div>
+                    <div class="example">A man, a plan, a canal: Panama</div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
