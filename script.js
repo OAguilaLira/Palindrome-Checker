@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultContainer = document.getElementById('result-container');
     const resultText = document.getElementById('result');
     const resultIcon = document.querySelector('.result-icon');
+    const form = document.getElementById('palindrome-form');
+
+    // Prevenir que se envié el formulario
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    })
 
     // Función para limpiar el string ingresado, eliminar caracteres no alfanuméricos y convertir a minúsculas
     function cleanStr(str) {
