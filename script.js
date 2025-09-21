@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function showResult(isValid, inputText) {
         // Actualizar contenido y clases
         if (isValid) {
-            resultText.textContent = `"${inputText}" is a palindrome!`;
+            resultText.textContent = `${inputText} is a palindrome`;
             resultContainer.className = 'result-container success show';
             resultIcon.className = 'result-icon fas fa-check-circle';
         } else {
-            resultText.textContent = `"${inputText}" is not a palindrome.`;
+            resultText.textContent = `${inputText} is not a palindrome`;
             resultContainer.className = 'result-container error show';
             resultIcon.className = 'result-icon fas fa-times-circle';
         }
