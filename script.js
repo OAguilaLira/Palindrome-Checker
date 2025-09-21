@@ -5,12 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const resultText = document.getElementById('result');
             const resultIcon = document.querySelector('.result-icon');
             
+            // Función para limpiar el string ingresado, eliminar caracteres no alfanuméricos y convertir a minúsculas
+            function cleanStr(str) {
+                const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                return cleanedStr;
+            }
+
+
             // Función para verificar si es palíndromo
             function isPalindrome(str) {
-                // Limpiar el string: eliminar caracteres no alfanuméricos y convertir a minúsculas
-                const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+                // Limpiar el string
+                const cleanedStr = cleanStr(str);
                 // Comparar con su reverso
-                return cleanedStr === cleanedStr.split('').reverse().join('');
+                const reversedString = cleanedStr.split('').reverse().join('');
+                return cleanedStr === reversedString;
             }
             
             // Función para mostrar el resultado
